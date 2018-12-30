@@ -14,6 +14,9 @@ import android.widget.Toast;
 
 import com.wiktor.crosssection_v04.R;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 
 public class Fragment3 extends Fragment implements View.OnClickListener {
 
@@ -26,6 +29,7 @@ public class Fragment3 extends Fragment implements View.OnClickListener {
     private double length;
     private double turns;
     private double result;
+    Double diam;
 
 
     @Nullable
@@ -51,8 +55,10 @@ public class Fragment3 extends Fragment implements View.OnClickListener {
         length = Double.parseDouble(editTextLength.getText().toString());
         turns = Double.parseDouble(editTextTurns.getText().toString());
 
-        Double diam = length / turns;
+        diam = length / turns;
         result = diam * diam * 0.785;
+        BigDecimal bigDecimal = new BigDecimal(result).setScale(3, RoundingMode.HALF_EVEN);
+        result = bigDecimal.doubleValue();
     }
 
     private void setResult() {
@@ -69,7 +75,7 @@ public class Fragment3 extends Fragment implements View.OnClickListener {
 
         calculations();
         setResult();
-        Toast.makeText(getContext(), Double.toString(result), Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(),"Диаметр = "+ Double.toString(diam), Toast.LENGTH_LONG).show();
 
     }
 }

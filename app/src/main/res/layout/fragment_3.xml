@@ -22,7 +22,7 @@
         android:layout_height="16dp"
         android:layout_marginTop="16dp"
         android:gravity="center"
-        android:text="Длина"
+        android:text="Длина (мм)"
         android:textColor="@color/mainTextColor"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -46,7 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Колличество полных витков"
+        android:text="Колличество полных витков (шт)"
         android:textColor="@color/mainTextColor"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -92,6 +92,7 @@
         app:layout_constraintTop_toBottomOf="@id/text_view4_fragment3" />
 
     <TextView
+        android:gravity="center"
         android:id="@+id/text_view5_fragment3"
         android:layout_width="wrap_content"
         android:layout_height="15dp"
