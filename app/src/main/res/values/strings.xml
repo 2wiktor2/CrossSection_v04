@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">CrossSection_v04</string>
-    <string name="mm_u00b2">mm ²</string>
+    <string name="button_text">Расчитать</string>
+    <string name="main_text_fragment_1">Расчет сечения многожильного провода</string>
+    <string name="main_text_fragment_2">Расчет сечения одножильного провода</string>
+    <string name="main_text_fragment_3">Расчет сечения одножильного провода, без замера диаметра.</string>
+    <string name="text_input_diameter">Ввод диаметра (мм)</string>
+    <string name="text_count">Количество жил</string>
+    <string name="text_result">Результат</string>
+    <string name="mm_u00b2">мм \u00b2</string>
 </resources>

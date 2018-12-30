@@ -4,92 +4,89 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <TextView
-        android:id="@+id/tv_name_of_fragment"
+        android:id="@+id/text_view_name_of_fragment2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:gravity="center"
-        android:text="Расчет сечения одножильного провода"
+        android:text="@string/main_text_fragment_2"
         android:textSize="24sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/text_view_fragment2"
         android:layout_width="wrap_content"
         android:layout_height="16dp"
         android:layout_marginTop="16dp"
         android:gravity="center"
-        android:text="Ввод диаметра"
+        android:text="@string/text_input_diameter"
         android:textColor="@color/mainTextColor"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_name_of_fragment" />
+        app:layout_constraintTop_toBottomOf="@id/text_view_name_of_fragment2" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/edit_text_fragment_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:gravity="center"
-        android:hint="123456789"
         android:inputType="numberDecimal"
-        android:textColor="@color/mainTextInOut"
+        android:textColor="@color/secondaryTextColor"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView" />
-
+        app:layout_constraintTop_toBottomOf="@id/text_view_fragment2" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/text_view3_fragment2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="false"
-        android:text="Результат"
+        android:text="@string/text_result"
         android:textColor="@color/mainTextColor"
-        android:textSize="30sp"
+        android:textSize="36sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView4" />
+        app:layout_constraintTop_toBottomOf="@id/text_view4_fragment2" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/text_view4_fragment2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Результат"
+        android:text="@string/text_result"
         android:textColor="@color/mainTextColor"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editText" />
+        app:layout_constraintTop_toBottomOf="@id/edit_text_fragment_2" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/text_view5_fragment2"
         android:layout_width="wrap_content"
         android:layout_height="15dp"
         android:layout_marginStart="16dp"
         android:text="@string/mm_u00b2"
         android:textColor="@color/mainTextColor"
-        app:layout_constraintBaseline_toBaselineOf="@id/textView3"
-        app:layout_constraintLeft_toRightOf="@id/textView3" />
-
+        app:layout_constraintBaseline_toBaselineOf="@id/text_view3_fragment2"
+        app:layout_constraintLeft_toRightOf="@id/text_view3_fragment2" />
 
     <Button
-        android:id="@+id/calculate"
+        android:id="@+id/button_calculate_fragment_2"
         android:layout_width="150dp"
         android:layout_height="80dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/mainButtonColor"
-        android:text="Calculate"
+        android:text="@string/button_text"
         android:textAlignment="center"
-        android:textColor="@color/mainTextColor"
+        android:textColor="@color/secondaryTextColor"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView5" />
+        app:layout_constraintTop_toBottomOf="@id/text_view5_fragment2" />
 
 
 </android.support.constraint.ConstraintLayout>

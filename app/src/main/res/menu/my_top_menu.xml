@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item android:id="@+id/info"
+        android:title="info"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_info_outline_black_24dp"
+        />
+    <item
+        android:title="Reset"
+        android:id="@+id/reset"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/exit"
+        android:title="Exit"
+        app:showAsAction="never"
+        android:orderInCategory="1"
+        />
+
+
+</menu>

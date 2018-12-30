@@ -7,10 +7,25 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.wiktor.crosssection_v04.R;
 
-public class Fragment2 extends Fragment {
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
+
+public class Fragment2 extends Fragment implements View.OnClickListener {
+
+private double diameter;
+private double result;
+
+Button buttonCalculate;
+EditText inputDiameter;
+TextView textViewResult;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -18,8 +33,40 @@ public class Fragment2 extends Fragment {
         return view;
     }
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+
+
+        buttonCalculate = getActivity().findViewById(R.id.button_calculate_fragment_2);
+        inputDiameter = getActivity().findViewById(R.id.edit_text_fragment_2);
+        textViewResult = getActivity().findViewById(R.id.text_view3_fragment2);
+
+        buttonCalculate.setOnClickListener(this);
+
+
+
+    }
+
     public static Fragment2 newInstance() {
         Fragment2 fragment2 = new Fragment2();
         return fragment2;
+    }
+
+    private void raschetSechenya(){
+  if (!inputDiameter.getText().toString().equals(""))
+        diameter = Double.parseDouble(inputDiameter.getText().toString());
+        result = diameter * diameter * 0.785;
+    }
+
+    @Override
+    public void onClick(View v) {
+        // todo не пашет тост
+        //Toast.makeText(MainActivity.class,"222", Toast.LENGTH_SHORT);
+
+        raschetSechenya();
+        BigDecimal bd = new BigDecimal(result).setScale(3, RoundingMode.HALF_EVEN);
+        result = bd.doubleValue();
+        textViewResult.setText(Double.toString(result));
+
     }
 }
