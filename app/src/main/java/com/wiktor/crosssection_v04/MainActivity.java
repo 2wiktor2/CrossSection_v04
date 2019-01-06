@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
     private void createInfoDialog() {
         final AlertDialog.Builder dialogInfo = new AlertDialog.Builder(this);
         dialogInfo.setTitle("Инфо")
-                .setMessage("Текст, Текст, Текст, Текст, Текст, Текст, Текст, Текст, Текст")
+                .setMessage(R.string.text_for_Info)
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {

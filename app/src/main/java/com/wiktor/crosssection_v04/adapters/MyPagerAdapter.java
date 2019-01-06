@@ -29,6 +29,13 @@ public class MyPagerAdapter extends FragmentPagerAdapter {
         return null;
     }
 
+    
+    // Returns the page title for the top indicator
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return "Page " + position;
+    }
+
     @Override
     public int getCount() {
         return Constants.NUM_ITEMS;
