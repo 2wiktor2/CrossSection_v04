@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.wiktor.crosssection_v04.R;
 
@@ -62,7 +61,7 @@ TextView textViewResult;
     @Override
     public void onClick(View v) {
         // todo не пашет тост
-        Toast.makeText(getContext(),"222", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getContext(),Double.toString(result), Toast.LENGTH_SHORT).show();
 
         raschetSechenya();
         BigDecimal bd = new BigDecimal(result).setScale(3, RoundingMode.HALF_EVEN);

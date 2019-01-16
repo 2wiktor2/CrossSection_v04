@@ -11,7 +11,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.wiktor.crosssection_v04.R;
 
@@ -80,7 +79,7 @@ public class Fragment1 extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         raschetSecheniya();
         setResult();
-        Toast.makeText(context, Double.toString(result), Toast.LENGTH_SHORT).show();
+        //Toast.makeText(context, Double.toString(result), Toast.LENGTH_SHORT).show();
 
 
     }
